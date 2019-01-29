@@ -11,7 +11,7 @@ export default StyleSheet.create({
       },
     
       textInput: {
-          height: 20,
+          height: 44,
           borderColor: 'gray',
           borderWidth: 1,
       }

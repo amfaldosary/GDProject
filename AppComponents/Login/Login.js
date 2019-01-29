@@ -21,6 +21,7 @@ export default class Login extends React.Component {
         </Text>
             <TextInput
                 style={Styles.textInput}
+                secureTextEntry = {true}
             />
        
        <Button 
