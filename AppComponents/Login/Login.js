@@ -9,25 +9,30 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={Styles.container}>
-        <Text>
+        <Text style={Styles.textFont}>
         Username
         </Text>
             <TextInput
                 style={Styles.textInput}
+                placeholder={'example@domain.com'}
+                
         
             />
-        <Text>
+        <Text style={Styles.textFont}>
         Password
         </Text>
             <TextInput
                 style={Styles.textInput}
                 secureTextEntry = {true}
+                placeholder={'xxxxxxxxx'}
             />
-       
+       <View style={Styles.buttonView}>
        <Button 
+       style={Styles.textFont}
        title="Login"
        onPress = {this.navigateToHome}
        />
+       </View>
       </View>
     );
   }
