@@ -6,9 +6,7 @@ export default class Login extends React.Component {
   static navigationOptions = {
     title: 'Home',
   };
-  navigateToHome = () => {
-    this.props.navigation.navigate('Registration')  
-  }
+  
   render() {
     return (
       <View style={Styles.container}>
