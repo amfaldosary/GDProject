@@ -3,6 +3,9 @@ import { StyleSheet, Text, TextInput, View ,Button} from 'react-native';
 import Styles from './../../StyleSheet';
 
 export default class Login extends React.Component {
+    static navigationOptions = {
+        title: 'Login',
+      };
     navigateToHome = () => {
         this.props.navigation.navigate('Home')
     }
@@ -30,6 +33,8 @@ export default class Login extends React.Component {
        <Button 
        style={Styles.textFont}
        title="Login"
+       size={20}
+       color="#fff"
        onPress = {this.navigateToHome}
        />
        </View>
