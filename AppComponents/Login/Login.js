@@ -8,7 +8,11 @@ export default class Login extends React.Component {
       };
     navigateToHome = () => {
         this.props.navigation.navigate('Home')
-    }
+    };
+
+    navigateToRegistration = () => {
+        this.props.navigation.navigate('Registration')  
+      };
   render() {
     return (
       <View style={Styles.container}>
@@ -38,11 +42,19 @@ export default class Login extends React.Component {
        onPress = {this.navigateToHome}
        />
        </View>
+       <View>
+           <Button 
+            title="create an account"
+            color="#000"
+            onPress = {this.navigateToRegistration}
+           />
+       </View>
       </View>
     );
   }
 }
 
 const styles = StyleSheet.create({
-  
+
+
 });
