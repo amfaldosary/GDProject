@@ -16,6 +16,7 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={Styles.container}>
+      <View style={Styles.LoginScreen}>
         <Text style={Styles.textFont}>
         Username
         </Text>
@@ -48,6 +49,7 @@ export default class Login extends React.Component {
             color="#000"
             onPress = {this.navigateToRegistration}
            />
+       </View>
        </View>
       </View>
     );

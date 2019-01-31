@@ -9,7 +9,11 @@ export default StyleSheet.create({
         alignItems: 'stretch',
         padding: 50,
       },
-    
+
+      LoginScreen: {
+        marginTop: 200,
+      },
+
       textInput: {
           backgroundColor: '#fff',
           height: 44,
