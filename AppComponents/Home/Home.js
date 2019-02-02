@@ -1,24 +1,35 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View ,Button} from 'react-native';
 import Styles from './../../StyleSheet';
 import MapView from 'react-native-maps';
+
 export default class Login extends React.Component {
   static navigationOptions = {
     title: 'Home',
   };
+  navigateToDestinationType = () => {
+    this.props.navigation.navigate('DestinationType')
+};
   render() {
     return (
-      <View style={styles.container} >
-          <MapView
-          style={styles.map}
-          region={{
-            latitude: 37.78825,
-            longitude: -122.4324,
-            latitudeDelta: 0.015,
-            longitudeDelta: 0.0121,
-          }}
-        >
-        </MapView>
+      <View style={Styles.container}>
+          <View style={styles.container} >
+              <MapView
+              style={styles.map}
+              showsUserLocation = {true}
+              showsMyLocationButton = {true}
+            >
+            </MapView>
+            <View style={styles.buttonView}>
+            <Button 
+            style={Styles.textFont}
+            title="Login"
+            size={20}
+            color="#fff"
+            onPress = {this.navigateToDestinationType}
+            />
+       </View>
+          </View>
       </View>
     );
   }
@@ -27,12 +38,16 @@ export default class Login extends React.Component {
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
-    height: 600,
-    width: 400,
-    justifyContent: 'flex-end',
+  
+    justifyContent: 'center',
     alignItems: 'center',
   },
   map: {
     ...StyleSheet.absoluteFillObject,
   },
+  buttonView: {
+    backgroundColor: '#979797',
+    position: 'absolute',
+    bottom:   50,
+}
  });

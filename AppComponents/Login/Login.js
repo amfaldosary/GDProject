@@ -5,7 +5,8 @@ import Styles from './../../StyleSheet';
 export default class Login extends React.Component {
     static navigationOptions = {
         title: 'Login',
-      };
+    };
+    
     navigateToHome = () => {
         this.props.navigation.navigate('Home')
     };
@@ -35,13 +36,13 @@ export default class Login extends React.Component {
                 placeholder={'xxxxxxxxx'}
             />
        <View style={Styles.buttonView}>
-       <Button 
-       style={Styles.textFont}
-       title="Login"
-       size={20}
-       color="#fff"
-       onPress = {this.navigateToHome}
-       />
+            <Button 
+            style={Styles.textFont}
+            title="Login"
+            size={20}
+            color="#fff"
+            onPress = {this.navigateToHome}
+            />
        </View>
        <View>
            <Button 
