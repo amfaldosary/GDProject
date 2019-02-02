@@ -3,28 +3,26 @@ import { StyleSheet, Text, TextInput, View ,Button} from 'react-native';
 import Styles from './../../StyleSheet';
 
 export default class Login extends React.Component {
-    static navigationOptions = {
-        title: 'Login',
-      };
-    navigateToHome = () => {
-        this.props.navigation.navigate('Home')
-    };
-
-    navigateToRegistration = () => {
-        this.props.navigation.navigate('Registration')  
-      };
+  static navigationOptions = {
+    title: 'Registration',
+  };
+  
   render() {
     return (
-      <View style={Styles.container}>
-      <View style={Styles.LoginScreen}>
+        <View style={Styles.container}>
         <Text style={Styles.textFont}>
-        Username
+         Email
         </Text>
             <TextInput
                 style={Styles.textInput}
                 placeholder={'example@domain.com'}
-                
-        
+            />
+        <Text style={Styles.textFont}>
+        Full name
+        </Text>
+            <TextInput
+                style={Styles.textInput}
+                placeholder={''}
             />
         <Text style={Styles.textFont}>
         Password
@@ -32,31 +30,26 @@ export default class Login extends React.Component {
             <TextInput
                 style={Styles.textInput}
                 secureTextEntry = {true}
-                placeholder={'xxxxxxxxx'}
+                placeholder={''}
+            />
+        <Text style={Styles.textFont}>
+        Password confirmation
+        </Text>
+            <TextInput
+                style={Styles.textInput}
+                secureTextEntry = {true}
+                placeholder={''}
             />
        <View style={Styles.buttonView}>
        <Button 
        style={Styles.textFont}
-       title="Login"
+       title="Done"
        size={20}
        color="#fff"
        onPress = {this.navigateToHome}
        />
        </View>
-       <View>
-           <Button 
-            title="create an account"
-            color="#000"
-            onPress = {this.navigateToRegistration}
-           />
-       </View>
-       </View>
       </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-
-
-});

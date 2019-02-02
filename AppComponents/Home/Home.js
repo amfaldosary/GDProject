@@ -3,10 +3,13 @@ import { StyleSheet, Text, View } from 'react-native';
 import Styles from './../../StyleSheet';
 
 export default class Login extends React.Component {
+  static navigationOptions = {
+    title: 'Home',
+  };
   render() {
     return (
       <View style={Styles.container}>
-       <Text> Home screen SUCKERS! </Text> 
+       <Text style={Styles.textFont}> Home screen SUCKERS! </Text> 
       </View>
     );
   }
