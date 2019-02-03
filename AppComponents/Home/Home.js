@@ -23,7 +23,7 @@ export default class Login extends React.Component {
             <View style={styles.buttonView}>
             <Button 
             style={Styles.textFont}
-            title="Login"
+            title="Service"
             size={20}
             color="#fff"
             onPress = {this.navigateToDestinationType}
