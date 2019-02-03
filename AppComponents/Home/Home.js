@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
     ...StyleSheet.absoluteFillObject,
   },
   buttonView: {
-    backgroundColor: '#979797',
+    backgroundColor: '#964d4d',
     position: 'absolute',
     bottom:   50,
 }
