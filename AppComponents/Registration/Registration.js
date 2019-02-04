@@ -6,6 +6,9 @@ export default class Login extends React.Component {
   static navigationOptions = {
     title: 'Registration',
   };
+  navigateToLogin = () => {
+    this.props.navigation.navigate('Login')
+  };
   
   render() {
     return (
@@ -46,7 +49,7 @@ export default class Login extends React.Component {
        title="Done"
        size={20}
        color="#fff"
-       onPress = {this.navigateToHome}
+       onPress = {this.navigateToLogin}
        />
        </View>
       </View>
