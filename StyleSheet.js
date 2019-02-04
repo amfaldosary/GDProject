@@ -21,6 +21,7 @@ export default StyleSheet.create({
           borderWidth: 1,
           marginTop: 10,
           marginBottom: 15,
+          borderRadius: 12,
       },
 
       textFont: {
@@ -33,6 +34,7 @@ export default StyleSheet.create({
           backgroundColor: '#979797',
           marginTop: 10,
           marginHorizontal: 30,
+          borderRadius: 12,
       }
 
       

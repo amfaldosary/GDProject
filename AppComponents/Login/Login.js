@@ -6,7 +6,7 @@ export default class Login extends React.Component {
     static navigationOptions = {
         title: 'Login',
     };
-    
+
     navigateToHome = () => {
         this.props.navigation.navigate('Home')
     };
