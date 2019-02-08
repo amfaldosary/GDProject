@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View ,Button} from 'react-native';
 import Styles from './../../StyleSheet';
+import MyButton from './../../ReusableComponents/Button';
 
 export default class Login extends React.Component {
   static navigationOptions = {
@@ -43,15 +44,9 @@ export default class Login extends React.Component {
                 secureTextEntry = {true}
                 placeholder={''}
             />
-       <View style={Styles.buttonView}>
-       <Button 
-       style={Styles.textFont}
-       title="Done"
-       size={20}
-       color="#fff"
-       onPress = {this.navigateToLogin}
-       />
-       </View>
+       
+       <MyButton onPress = {this.navigateToLogin}>Done</MyButton>
+       
       </View>
     );
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View ,Button} from 'react-native';
 import Styles from './../../StyleSheet';
+import MyButton from './../../ReusableComponents/Button';
 
 export default class Login extends React.Component {
     static navigationOptions = {
@@ -10,33 +11,9 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={Styles.container}>
-      <View style={Styles.buttonView}>
-            <Button 
-            style={Styles.textFont}
-            title="Hospitals"
-            size={20}
-            color="#fff"
-            onPress = {this.navigateToHome}
-            />
-        </View>
-        <View style={Styles.buttonView}>
-            <Button 
-            style={Styles.textFont}
-            title="Clinics"
-            size={20}
-            color="#fff"
-            onPress = {this.navigateToHome}
-            />
-        </View>
-        <View style={Styles.buttonView}>
-            <Button 
-            style={Styles.textFont}
-            title="Pharmacy"
-            size={20}
-            color="#fff"
-            onPress = {this.navigateToHome}
-            />
-        </View>
+      <MyButton>Hospitals</MyButton>
+      <MyButton>Clinics</MyButton>
+      <MyButton>Pharmacy</MyButton>
       </View>
     );
   }
