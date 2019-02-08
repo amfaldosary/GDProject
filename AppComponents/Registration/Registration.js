@@ -2,6 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, TextInput, View ,Button} from 'react-native';
 import Styles from './../../StyleSheet';
 
+import MyButton from './../../ReusableComponents/Button';
+import MyTextInput from './../../ReusableComponents/TextInput';
+
 export default class Login extends React.Component {
   static navigationOptions = {
     title: 'Registration',
@@ -16,42 +19,32 @@ export default class Login extends React.Component {
         <Text style={Styles.textFont}>
          Email
         </Text>
-            <TextInput
-                style={Styles.textInput}
+            <MyTextInput
                 placeholder={'example@domain.com'}
             />
         <Text style={Styles.textFont}>
         Full name
         </Text>
-            <TextInput
-                style={Styles.textInput}
+            <MyTextInput
                 placeholder={''}
             />
         <Text style={Styles.textFont}>
         Password
         </Text>
-            <TextInput
-                style={Styles.textInput}
+            <MyTextInput
                 secureTextEntry = {true}
                 placeholder={''}
             />
         <Text style={Styles.textFont}>
         Password confirmation
         </Text>
-            <TextInput
-                style={Styles.textInput}
+            <MyTextInput
                 secureTextEntry = {true}
                 placeholder={''}
             />
-       <View style={Styles.buttonView}>
-       <Button 
-       style={Styles.textFont}
-       title="Done"
-       size={20}
-       color="#fff"
-       onPress = {this.navigateToLogin}
-       />
-       </View>
+       
+       <MyButton onPress = {this.navigateToLogin}>Done</MyButton>
+       
       </View>
     );
   }
