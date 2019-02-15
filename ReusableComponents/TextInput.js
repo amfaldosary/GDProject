@@ -8,6 +8,8 @@ const myTextInput = (props) => {
                 style={styles.textInput}
                 placeholder={props.placeholder}
                 secureTextEntry={props.secureTextEntry}
+                autoCapitalize={"none"}
+                autoCorrect={false}
             />
        </View>
     );
