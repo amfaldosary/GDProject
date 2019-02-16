@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, TextInput, View ,Button} from 'react-native';
 import Styles from './../../StyleSheet';
-
 import MyButton from './../../ReusableComponents/Button';
 import MyTextInput from './../../ReusableComponents/TextInput';
+import { connect } from 'react-redux';
+import {loginUser} from '../actions/firebaseActions'
 
-
-export default class Login extends React.Component {
+class Login extends React.Component {
     static navigationOptions = {
         title: 'Login',
     };
@@ -35,7 +35,7 @@ export default class Login extends React.Component {
                 secureTextEntry = {true}
                 placeholder={'xxxxxxxxx'}
             />
-       <MyButton onPress={this.navigateToHome}>Login</MyButton>
+       <MyButton onPress={this.props.loginUser}>Login</MyButton>
        <View>
            <Button 
             title="create an account"
@@ -53,3 +53,5 @@ const styles = StyleSheet.create({
 
 
 });
+
+export default connect(null, {loginUser})(Login)

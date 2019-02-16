@@ -9,10 +9,15 @@
 
 import React, {Component} from 'react';
 import Navigator from './AppNavigation/Navigator';
+import {Provider} from 'react-redux';
+import store from './store' 
 
 export default class App extends React.Component {
   render() {
-    return (  <Navigator/> 
+    return (  
+      <Provider store = {store}>
+        <Navigator/> 
+      </Provider>
       );
   }
 }
